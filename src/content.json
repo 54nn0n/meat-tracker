@@ -1,6 +1,10 @@
 {
+  "app": {
+    "title": "Meat Intake Tracker",
+    "logIntakeButton": "Log intake"
+  },
   "calendar": {
-    "weekDays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "weekDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     "switchToWeekView": "Switch to week view",
     "switchToMonthView": "Switch to month view"
   },
@@ -19,10 +23,15 @@
     "suffix": "It's been..."
   },
   "summary": {
-    "title": "Summary",
+    "title": "Stats",
     "totalDaysLogged": "Total days logged",
     "totalDaysMeatless": "Total days meatless",
-    "mostCommonMeatTime": "Most common meat/fish time",
+    "mostCommonMeatTime": "Most common meatless time",
     "meatTypeCounts": "Meat type counts"
+  },
+  "settings": {
+    "title": "Settings",
+    "downloadData": "Download data",
+    "uploadData": "Upload data"
   }
 }

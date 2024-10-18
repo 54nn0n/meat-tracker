@@ -43,7 +43,7 @@ const MeatlessStreak: React.FC<MeatlessStreakProps> = ({ meatIntakeData }) => {
   };
 
   return (
-    <div className="w-full max-w-md mb-6 p-4 bg-primary-contrast rounded-lg shadow-md">
+    <div className="w-full max-w-md mb-6 p-4 bg-primary-contrast rounded-lg">
       <p className="text-primary">
         {content.streak.prefix} {streakStartDate ? formatDate(streakStartDate) : 'today'}. {content.streak.suffix}
       </p>

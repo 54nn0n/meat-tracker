@@ -37,22 +37,29 @@ const Summary: React.FC<SummaryProps> = ({ meatIntakeData }) => {
 
   const summary = calculateSummary();
 
+  const StatCard: React.FC<{ title: string; value: number | string }> = ({ title, value }) => (
+    <div className="bg-primary-contrast rounded-lg p-4">
+      <h4 className="text-primary">{title}</h4>
+      <p className="text-lg font-bold text-primary">
+        {typeof value === 'number' ? `${value} ${value === 1 ? 'day' : 'days'}` : value}
+      </p>
+    </div>
+  );
+
   return (
-    <div className="w-full max-w-md mt-6 p-4 bg-primary-contrast rounded-lg shadow-md">
-      <h3 className="text-lg font-semibold mb-2 text-primary">{content.summary.title}</h3>
-      <ul className="space-y-2">
-        <li className="text-primary">{content.summary.totalDaysLogged}: {summary.totalDays}</li>
-        <li className="text-primary">{content.summary.totalDaysMeatless}: {summary.meatlessDays}</li>
-        <li className="text-primary">{content.summary.mostCommonMeatTime}: {summary.mostCommonMeatTime}</li>
-        <li className="text-primary">
-          {content.summary.meatTypeCounts}:
-          <ul className="ml-4">
-            {Object.entries(summary.meatTypes).map(([type, count]) => (
-              <li key={type}>{type}: {count}</li>
-            ))}
-          </ul>
-        </li>
-      </ul>
+    <div className="w-full max-w-md mt-6">
+      <h3 className="text-lg font-semibold mb-4 text-primary">{content.summary.title}</h3>
+      <div className="grid grid-cols-2 gap-4">
+        <StatCard title={content.summary.totalDaysLogged} value={summary.totalDays} />
+        <StatCard title={content.summary.totalDaysMeatless} value={summary.meatlessDays} />
+        <StatCard title={content.summary.mostCommonMeatTime} value={summary.mostCommonMeatTime} />
+        <StatCard 
+          title={content.summary.meatTypeCounts} 
+          value={Object.entries(summary.meatTypes)
+            .map(([type, count]) => `${type}: ${count}`)
+            .join(', ')} 
+        />
+      </div>
     </div>
   );
 };

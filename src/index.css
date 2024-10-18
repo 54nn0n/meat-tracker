@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-100: #F6F4EA;
+  --color-gray-200: #AEA499;
+  --color-gray-300: #796E63;
+  --color-green-100: #C6E6CF;
+  --color-red-100: #E6B7B7;
+  --color-blue-100: #B7CFE6;
+}
+
 body {
-  @apply bg-[#F6F4EA];
+  @apply bg-background;
+  font-family: 'Jost', sans-serif;
 }
