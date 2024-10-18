@@ -1,0 +1,28 @@
+{
+  "calendar": {
+    "weekDays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "switchToWeekView": "Switch to week view",
+    "switchToMonthView": "Switch to month view"
+  },
+  "drawer": {
+    "meatlessQuestion": "Did you go meatless today?",
+    "yes": "Yes",
+    "no": "No",
+    "meatTypeQuestion": "What kind of meat did you eat?",
+    "meatTypes": ["Beef", "Pork", "Chicken", "Processed meats", "Lamb", "Veal", "Fish", "Shellfish"],
+    "mealQuestion": "During which meals did you eat meat?",
+    "meals": ["Breakfast", "Elevensies", "Lunch", "Snack", "Dinner", "Supper", "Late night snack"],
+    "save": "Save"
+  },
+  "streak": {
+    "prefix": "You have been meatless since",
+    "suffix": "It's been..."
+  },
+  "summary": {
+    "title": "Summary",
+    "totalDaysLogged": "Total days logged",
+    "totalDaysMeatless": "Total days meatless",
+    "mostCommonMeatTime": "Most common meat/fish time",
+    "meatTypeCounts": "Meat type counts"
+  }
+}
